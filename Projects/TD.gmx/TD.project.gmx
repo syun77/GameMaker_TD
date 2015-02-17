@@ -7,6 +7,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_enemy</sprite>
+    <sprite>sprites\spr_infantry</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_back</background>
@@ -14,6 +15,10 @@
   <paths name="paths">
     <path>paths\pth_enemy</path>
   </paths>
+  <objects name="objects">
+    <object>objects\obj_enemy</object>
+    <object>objects\obj_infantry</object>
+  </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
   </rooms>
