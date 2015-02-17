@@ -28,6 +28,8 @@
             <string>/// 初期化
 // 射程範囲
 range = 40;
+// 攻撃威力
+damage = 2;
 // 連射速度
 firerate = 2 * 60
 
@@ -153,6 +155,9 @@ with(instance_create(x, y, obj_shot))
   
   // 速度を設定
   speed = 8;
+  
+  // 攻撃力を設定
+  damage = other.damage;
 }
     
 // インターバル開始
