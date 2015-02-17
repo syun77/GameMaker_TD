@@ -6,7 +6,9 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_back</background>
+  </backgrounds>
   <paths name="paths"/>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
