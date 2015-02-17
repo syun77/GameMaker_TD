@@ -9,7 +9,9 @@
   <backgrounds name="background">
     <background>background\bg_back</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\pth_enemy</path>
+  </paths>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
   </rooms>
