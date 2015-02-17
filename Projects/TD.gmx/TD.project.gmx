@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_infantry</sprite>
+    <sprite>sprites\spr_shot</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_back</background>
@@ -18,6 +19,7 @@
   <objects name="objects">
     <object>objects\obj_enemy</object>
     <object>objects\obj_infantry</object>
+    <object>objects\obj_shot</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
