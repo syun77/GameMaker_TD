@@ -5,7 +5,9 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\spr_enemy</sprite>
+  </sprites>
   <backgrounds name="background">
     <background>background\bg_back</background>
   </backgrounds>
