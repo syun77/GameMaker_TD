@@ -28,9 +28,13 @@
             <string>/// 初期化
 // 射程範囲
 range = 40;
+// 連射速度
+firerate = 2 * 60
 
 // 攻撃対象
 target = noone;
+// インターバルタイマー
+tInterval = 0;
 
 </string>
           </argument>
@@ -38,6 +42,32 @@ target = noone;
       </action>
     </event>
     <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// インターバルタイマーを更新
+if(tInterval &gt; 0)
+{
+  tInterval--;
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -107,6 +137,13 @@ if(abs(diff2) &gt; 16)
           <argument>
             <kind>1</kind>
             <string>/// ショットを撃つ
+// インターバルタイマーをチェック
+if(tInterval &gt; 0)
+{
+  // まだ撃てない
+  exit;
+}
+
 // ローカル変数に格納する
 var e = target;
 with(instance_create(x, y, obj_shot))
@@ -117,6 +154,9 @@ with(instance_create(x, y, obj_shot))
   // 速度を設定
   speed = 8;
 }
+    
+// インターバル開始
+tInterval = firerate;
 
 </string>
           </argument>
