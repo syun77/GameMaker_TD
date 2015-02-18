@@ -16,10 +16,14 @@
   <paths name="paths">
     <path>paths\pth_enemy</path>
   </paths>
+  <scripts name="scripts">
+    <script>scripts\gameMgr_stepMain.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_enemy</object>
     <object>objects\obj_infantry</object>
     <object>objects\obj_shot</object>
+    <object>objects\obj_gameMgr</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
