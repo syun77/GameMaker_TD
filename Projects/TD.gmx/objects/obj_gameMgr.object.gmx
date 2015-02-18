@@ -31,12 +31,17 @@ nWave = 1;
 
 // 敵生成のインターバル
 spawnInterval = 60;
-
 // 敵生成のインターバルタイマー
 spawnIntervalTimer = 0;
-
 // Wave内で敵を生成する数
 spawnNumber = 6;
+
+// カーソル座標(X)
+xcursor = 0;
+// カーソル座標(Y)
+ycursor = 0;
+// カーソル位置にあるオブジェクト
+cursorObj = noone;
 
 </string>
           </argument>

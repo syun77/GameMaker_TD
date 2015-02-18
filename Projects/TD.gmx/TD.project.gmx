@@ -28,6 +28,9 @@
   <rooms name="rooms">
     <room>rooms\rm_main</room>
   </rooms>
+  <constants number="1">
+    <constant name="GRID_SIZE">32</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
