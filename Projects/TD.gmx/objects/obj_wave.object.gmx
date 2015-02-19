@@ -26,31 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>/// 初期化
-// Wave数
+state = 0;
+tiemr = 0;
+
+// 現在のWave数
 nWave = 1;
-// 所持金
-money = 30;
-// 状態
-state = STATE_WAIT;
-// 汎用タイマー
-timer = 2 * 60;
-
-// 敵生成のインターバル
-spawnInterval = 60;
-// 敵生成のインターバルタイマー
-spawnIntervalTimer = 0;
-// Wave内で敵を生成する数
-spawnNumber = 6;
-
-// カーソル座標(X)
-xcursor = 0;
-// カーソル座標(Y)
-ycursor = 0;
-// カーソル位置にあるオブジェクト
-cursorObj = noone;
-
-// 操作モード
-selmode = SELMODE_NONE;
 
 </string>
           </argument>
@@ -75,39 +55,44 @@ selmode = SELMODE_NONE;
           <argument>
             <kind>1</kind>
             <string>/// 更新
-// カーソル更新
-gameMgr_updateCursor();
-
 switch(state)
 {
-case STATE_WAIT:
-  // ■開始の待ち時間
+case 0:
+  state = 1;
+  timer = 60;
+  x = -80;
+  y = room_height/2;
+  break;
+case 1:
+  // 出現中
+  timer *= 0.9;
+  x = 320 - 400 * (timer / 60);
+  if(timer &lt; 1)
+  {
+    timer = 60 * 1;
+    state = 2;
+  }
+  break;
+case 2:
+  // 少し止まる
   timer--;
   if(timer &lt; 1)
   {
-    // ▼メインゲーム開始
-    // 敵出現数を設定
-    spawnNumber = enemy_getSpawnNumber(nWave);
-    // 敵生成のインターバル
-    spawnInterval = enemy_getSpawnInterval(nWave);
-    spawnIntervalTimer = 0;
-    
-    // Wave開始演出
-    with(instance_create(-80, 0, obj_wave))
-    {
-      // Wave数を設定する
-      nWave = other.nWave;
-    }
-    
-    state = STATE_MAIN;
+    state = 3;
+    hspeed = 0;
   }
   break;
-  
-case STATE_MAIN:
-  // ■メイン処理を呼び出し
-  gameMgr_stepMain();
+case 3:
+  // 退出する
+  hspeed += 0.5;
+  if(x &gt; room_width)
+  {
+    // 画面外に出たので消す
+    instance_destroy();
+  }
   break;
 }
+
 </string>
           </argument>
         </arguments>
@@ -130,69 +115,21 @@ case STATE_MAIN:
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// GUIの描画
-draw_set_colour(c_white);
-var px = 640 + 8;
-// Wave数の描画
-draw_text(px, 8, "WAVE: " + string(nWave));
-// 所持金の描画
-draw_text(px, 24, "MONEY: $" + string(money_get()));
+            <string>/// 描画
+// 中央揃え
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// カーソルの描画
-// 矩形カーソルの描画
-if(xcursor &gt; 640)
-{
-  // UI領域外なので描画不要
-  exit;
-}
-draw_set_colour(c_red);
-var x1 = xcursor - GRID_SIZE/2;
-var y1 = ycursor - GRID_SIZE/2;
-var x2 = x1 + GRID_SIZE;
-var y2 = y1 + GRID_SIZE;
-draw_rectangle(x1, y1, x2, y2, true);
+var text = "WAVE " + string(nWave);
+var sc = 3; // 拡大サイズ
+// 影をつける
+draw_set_color(c_black);
+draw_text_transformed(x+2, y+2, text, sc, sc, 0);
+draw_set_color(c_white);
+draw_text_transformed(x, y, text, sc, sc, 0);
 
-// 購入モードでなければ配置する砲台を描画しない
-if(selmode != SELMODE_BUY)
-{
-  exit;
-}
-
-// 砲台を薄く描画する
-if(cursorObj != noone)
-{
-  if(cursorObj.object_index == obj_off)
-  {
-    // 配置できない場所なので配置不可の描画
-    draw_sprite(spr_off, 0, x1, y1);
-  }
-  exit;
-}
-draw_set_alpha(0.3);
-draw_sprite(spr_infantry, 0, xcursor, ycursor);
-draw_set_alpha(1);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
 
 </string>
           </argument>
