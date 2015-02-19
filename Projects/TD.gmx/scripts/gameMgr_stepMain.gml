@@ -5,7 +5,7 @@ spawnIntervalTimer++;
 if(spawnNumber > 0 and spawnIntervalTimer >= spawnInterval)
 {
   // 敵を生成する
-  instance_create(0, 0, obj_enemy);
+  enemy_spawn(nWave);
   // 生成する敵の数を減らす
   spawnNumber--;
   // タイマーを減らす
@@ -27,4 +27,3 @@ if(spawnNumber <= 0 and instance_number(obj_enemy) == 0)
   // ちょっと待つ
   timer = 2 * 60;
 }
-

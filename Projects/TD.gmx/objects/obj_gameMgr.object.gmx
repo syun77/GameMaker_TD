@@ -87,9 +87,9 @@ case STATE_WAIT:
   {
     // ▼メインゲーム開始
     // 敵出現数を設定
-    spawnNumber = 6;
+    spawnNumber = enemy_getSpawnNumber(nWave);
     // 敵生成のインターバル
-    spawnInterval = 60;
+    spawnInterval = enemy_getSpawnInterval(nWave);
     spawnIntervalTimer = 0;
     state = STATE_MAIN;
   }

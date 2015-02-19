@@ -26,6 +26,12 @@
     <script>scripts\money_add.gml</script>
     <script>scripts\cost_infantry.gml</script>
     <script>scripts\gameMgr_changeSelMode.gml</script>
+    <script>scripts\enemy_getHp.gml</script>
+    <script>scripts\enemy_getSpeed.gml</script>
+    <script>scripts\enemy_getSpawnNumber.gml</script>
+    <script>scripts\enemy_getSpawnInterval.gml</script>
+    <script>scripts\enemy_spawn.gml</script>
+    <script>scripts\enemy_getMoney.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_enemy</object>

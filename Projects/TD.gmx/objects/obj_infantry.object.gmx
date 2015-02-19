@@ -29,7 +29,7 @@
 // 射程範囲
 range = 40;
 // 攻撃威力
-damage = 2;
+damage = 1;
 // 連射速度
 firerate = 2 * 60
 
