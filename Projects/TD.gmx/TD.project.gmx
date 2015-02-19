@@ -18,6 +18,7 @@
   </paths>
   <scripts name="scripts">
     <script>scripts\gameMgr_stepMain.gml</script>
+    <script>scripts\gameMgr_updateCursor.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_enemy</object>

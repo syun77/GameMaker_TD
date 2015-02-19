@@ -74,6 +74,52 @@ gameMgr_stepMain();
         </arguments>
       </action>
     </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// カーソルの描画
+// 矩形カーソルの描画
+if(xcursor &gt; 640)
+{
+  // UI領域外なので描画不要
+  exit;
+}
+draw_set_colour(c_red);
+var x1 = xcursor - GRID_SIZE/2;
+var y1 = ycursor - GRID_SIZE/2;
+var x2 = x1 + GRID_SIZE;
+var y2 = y1 + GRID_SIZE;
+draw_rectangle(x1, y1, x2, y2, true);
+
+// 砲台を薄く描画する
+if(cursorObj != noone)
+{
+  // 配置できないので描画不要
+  exit;
+}
+draw_set_alpha(0.3);
+draw_sprite(spr_infantry, 0, xcursor, ycursor);
+draw_set_alpha(1);
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
   </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
