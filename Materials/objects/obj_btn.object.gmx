@@ -198,7 +198,7 @@ case 0: // 通常
   break;
 case 1: // マウスが上に乗っている
   // 少し明るくする
-  c = merge_colour(c, c_white, 0.2);
+  c = merge_colour(c, c_white, 0.4);
   break;
 case 2: // クリック中
   ofsY += 2;
@@ -219,7 +219,8 @@ else
   var c2 = merge_colour(c, c_black, 0.5);
   draw_set_colour(c2);
   draw_rectangle(x, y, x+width, y+height, false);
-  draw_set_colour(c);
+  var c3 = merge_colour(c2, c_black, 0.5);
+  draw_set_colour(c3);
   draw_rectangle(x, y, x+width, y+height, true);
 }
 

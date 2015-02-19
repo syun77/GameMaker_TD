@@ -14,3 +14,9 @@ if(spawnNumber > 0 and spawnIntervalTimer >= spawnInterval)
 
 // カーソル更新
 gameMgr_updateCursor();
+
+// 購入ボタンの有効・無効をチェックする
+var cost = cost_infantry();
+var money = money_get();
+obj_btnBuy.bEnabled = (cost <= money);
+
