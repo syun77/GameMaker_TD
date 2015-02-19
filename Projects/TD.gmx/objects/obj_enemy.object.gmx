@@ -217,6 +217,9 @@ if(hp &lt;= 0)
 {
   // HPがなくなったので消滅
   instance_destroy();
+  
+  // お金を増やす
+  money_add(money);
 }
 
 </string>
