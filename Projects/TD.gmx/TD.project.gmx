@@ -20,6 +20,10 @@
   <scripts name="scripts">
     <script>scripts\gameMgr_stepMain.gml</script>
     <script>scripts\gameMgr_updateCursor.gml</script>
+    <script>scripts\money_get.gml</script>
+    <script>scripts\money_use.gml</script>
+    <script>scripts\money_add.gml</script>
+    <script>scripts\cost_infantry.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_enemy</object>

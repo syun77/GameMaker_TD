@@ -29,4 +29,3 @@ if(mouse_check_button_pressed(mb_left) == false)
 }
 // 配置できる
 instance_create(xcursor, ycursor, obj_infantry);
-

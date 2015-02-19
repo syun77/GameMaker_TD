@@ -28,6 +28,8 @@
             <string>/// 初期化
 // Wave数
 nWave = 1;
+// 所持金
+money = 300;
 
 // 敵生成のインターバル
 spawnInterval = 60;

@@ -64,6 +64,9 @@ image_speed = 0.1;
 // HPを設定する
 hp = 3;
 
+// 所持金の設定
+money = 1;
+
 </string>
           </argument>
         </arguments>
