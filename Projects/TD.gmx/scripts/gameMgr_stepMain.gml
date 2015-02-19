@@ -1,5 +1,4 @@
 /// gameMgr_stepMain(); ゲームのメイン処理
-/// 更新
 // インターバルタイマー更新
 spawnIntervalTimer++;
 if(spawnNumber > 0 and spawnIntervalTimer >= spawnInterval)
