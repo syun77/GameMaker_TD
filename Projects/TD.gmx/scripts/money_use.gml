@@ -6,4 +6,3 @@ if(obj_gameMgr.money < 0)
   // 0より小さくならないようにする
   obj_gameMgr.money = 0;
 }
-

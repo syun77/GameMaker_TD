@@ -8,4 +8,3 @@ var cost = 8 * power(1.3, (num-1));
 
 // 小数点は切り捨て
 return floor(cost);
-

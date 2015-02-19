@@ -30,6 +30,10 @@
 nWave = 1;
 // 所持金
 money = 30;
+// 状態
+state = STATE_WAIT;
+// 汎用タイマー
+timer = 2 * 60;
 
 // 敵生成のインターバル
 spawnInterval = 60;
@@ -71,8 +75,31 @@ selmode = SELMODE_NONE;
           <argument>
             <kind>1</kind>
             <string>/// 更新
-// メイン処理を呼び出し
-gameMgr_stepMain();
+// カーソル更新
+gameMgr_updateCursor();
+
+switch(state)
+{
+case STATE_WAIT:
+  // ■開始の待ち時間
+  timer--;
+  if(timer &lt; 1)
+  {
+    // ▼メインゲーム開始
+    // 敵出現数を設定
+    spawnNumber = 6;
+    // 敵生成のインターバル
+    spawnInterval = 60;
+    spawnIntervalTimer = 0;
+    state = STATE_MAIN;
+  }
+  break;
+  
+case STATE_MAIN:
+  // ■メイン処理を呼び出し
+  gameMgr_stepMain();
+  break;
+}
 
 </string>
           </argument>

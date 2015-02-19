@@ -39,10 +39,12 @@
   <rooms name="rooms">
     <room>rooms\rm_main</room>
   </rooms>
-  <constants number="3">
+  <constants number="5">
     <constant name="GRID_SIZE">32</constant>
     <constant name="SELMODE_NONE">0</constant>
     <constant name="SELMODE_BUY">1</constant>
+    <constant name="STATE_WAIT">0</constant>
+    <constant name="STATE_MAIN">1</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

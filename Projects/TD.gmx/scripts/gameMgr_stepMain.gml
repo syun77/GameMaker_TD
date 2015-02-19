@@ -12,11 +12,19 @@ if(spawnNumber > 0 and spawnIntervalTimer >= spawnInterval)
   spawnIntervalTimer -= spawnInterval;
 }
 
-// カーソル更新
-gameMgr_updateCursor();
-
 // 購入ボタンの有効・無効をチェックする
 var cost = cost_infantry();
 var money = money_get();
 obj_btnBuy.bEnabled = (cost <= money);
+
+// クリア判定
+if(spawnNumber <= 0 and instance_number(obj_enemy) == 0)
+{
+  // 敵がすべて出現した かつ 敵の生存数が「0」
+  // クリアしたので、次のWaveに進む
+  nWave++;
+  state = STATE_WAIT;
+  // ちょっと待つ
+  timer = 2 * 60;
+}
 
