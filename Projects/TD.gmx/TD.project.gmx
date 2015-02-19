@@ -10,6 +10,7 @@
     <sprite>sprites\spr_infantry</sprite>
     <sprite>sprites\spr_shot</sprite>
     <sprite>sprites\spr_off</sprite>
+    <sprite>sprites\spr_button</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_back</background>
@@ -24,6 +25,7 @@
     <script>scripts\money_use.gml</script>
     <script>scripts\money_add.gml</script>
     <script>scripts\cost_infantry.gml</script>
+    <script>scripts\gameMgr_changeSelMode.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_enemy</object>
@@ -31,12 +33,16 @@
     <object>objects\obj_shot</object>
     <object>objects\obj_gameMgr</object>
     <object>objects\obj_off</object>
+    <object>objects\obj_btn</object>
+    <object>objects\obj_btnBuy</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
   </rooms>
-  <constants number="1">
+  <constants number="3">
     <constant name="GRID_SIZE">32</constant>
+    <constant name="SELMODE_NONE">0</constant>
+    <constant name="SELMODE_BUY">1</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

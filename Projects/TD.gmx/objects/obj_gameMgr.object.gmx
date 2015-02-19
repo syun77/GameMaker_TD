@@ -29,7 +29,7 @@
 // Wave数
 nWave = 1;
 // 所持金
-money = 300;
+money = 30;
 
 // 敵生成のインターバル
 spawnInterval = 60;
@@ -44,6 +44,9 @@ xcursor = 0;
 ycursor = 0;
 // カーソル位置にあるオブジェクト
 cursorObj = noone;
+
+// 操作モード
+selmode = SELMODE_NONE;
 
 </string>
           </argument>
@@ -136,6 +139,12 @@ var y1 = ycursor - GRID_SIZE/2;
 var x2 = x1 + GRID_SIZE;
 var y2 = y1 + GRID_SIZE;
 draw_rectangle(x1, y1, x2, y2, true);
+
+// 購入モードでなければ配置する砲台を描画しない
+if(selmode != SELMODE_BUY)
+{
+  exit;
+}
 
 // 砲台を薄く描画する
 if(cursorObj != noone)

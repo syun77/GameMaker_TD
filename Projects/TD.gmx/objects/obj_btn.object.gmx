@@ -81,6 +81,7 @@ if(visible == false)
   // 非表示のときは更新しない
   exit;
 }
+
 var px = mouse_x;
 var py = mouse_y;
 if(bEnabled and point_in_rectangle(px, py, x, y, x+width, y+height))
