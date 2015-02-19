@@ -9,6 +9,7 @@
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_infantry</sprite>
     <sprite>sprites\spr_shot</sprite>
+    <sprite>sprites\spr_off</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_back</background>
@@ -25,6 +26,7 @@
     <object>objects\obj_infantry</object>
     <object>objects\obj_shot</object>
     <object>objects\obj_gameMgr</object>
+    <object>objects\obj_off</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>

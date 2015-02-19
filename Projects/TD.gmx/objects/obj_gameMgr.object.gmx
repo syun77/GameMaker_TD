@@ -108,7 +108,11 @@ draw_rectangle(x1, y1, x2, y2, true);
 // 砲台を薄く描画する
 if(cursorObj != noone)
 {
-  // 配置できないので描画不要
+  if(cursorObj.object_index == obj_off)
+  {
+    // 配置できない場所なので配置不可の描画
+    draw_sprite(spr_off, 0, x1, y1);
+  }
   exit;
 }
 draw_set_alpha(0.3);

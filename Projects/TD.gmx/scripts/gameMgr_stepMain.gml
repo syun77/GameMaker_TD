@@ -14,4 +14,3 @@ if(spawnNumber > 0 and spawnIntervalTimer >= spawnInterval)
 
 // カーソル更新
 gameMgr_updateCursor();
-
