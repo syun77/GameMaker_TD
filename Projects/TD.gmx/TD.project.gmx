@@ -11,6 +11,7 @@
     <sprite>sprites\spr_shot</sprite>
     <sprite>sprites\spr_off</sprite>
     <sprite>sprites\spr_button</sprite>
+    <sprite>sprites\spr_heart</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_back</background>

@@ -56,6 +56,26 @@ selmode = SELMODE_NONE;
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>711</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_life</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>3</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -139,6 +159,34 @@ draw_text(px, 8, "WAVE: " + string(nWave));
 draw_text(px, 24, "MONEY: $" + string(money_get()));
 
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>714</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_draw_life_images</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>648</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>40</string>
+          </argument>
+          <argument>
+            <kind>5</kind>
+            <sprite>spr_heart</sprite>
           </argument>
         </arguments>
       </action>
