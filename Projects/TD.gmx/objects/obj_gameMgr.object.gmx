@@ -98,6 +98,10 @@ selmode = SELMODE_NONE;
 // カーソル更新
 gameMgr_updateCursor();
 
+// 購入ボタンの更新
+gameMgr_updateBtnBuy();
+
+// 状態による分岐
 switch(state)
 {
 case STATE_WAIT:

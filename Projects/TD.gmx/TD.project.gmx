@@ -22,11 +22,12 @@
   <scripts name="scripts">
     <script>scripts\gameMgr_stepMain.gml</script>
     <script>scripts\gameMgr_updateCursor.gml</script>
+    <script>scripts\gameMgr_changeSelMode.gml</script>
+    <script>scripts\gameMgr_updateBtnBuy.gml</script>
     <script>scripts\money_get.gml</script>
     <script>scripts\money_use.gml</script>
     <script>scripts\money_add.gml</script>
     <script>scripts\cost_infantry.gml</script>
-    <script>scripts\gameMgr_changeSelMode.gml</script>
     <script>scripts\enemy_getHp.gml</script>
     <script>scripts\enemy_getSpeed.gml</script>
     <script>scripts\enemy_getSpawnNumber.gml</script>

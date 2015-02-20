@@ -19,11 +19,6 @@ if(spawnNumber > 0 and spawnIntervalTimer >= spawnInterval)
   spawnIntervalTimer -= spawnInterval;
 }
 
-// 購入ボタンの有効・無効をチェックする
-var cost = cost_infantry();
-var money = money_get();
-obj_btnBuy.bEnabled = (cost <= money);
-
 // クリア判定
 if(spawnNumber <= 0 and instance_number(obj_enemy) == 0)
 {
@@ -34,4 +29,3 @@ if(spawnNumber <= 0 and instance_number(obj_enemy) == 0)
   // ちょっと待つ
   timer = 2 * 60;
 }
-
