@@ -127,6 +127,15 @@ case STATE_MAIN:
   // ■メイン処理を呼び出し
   gameMgr_stepMain();
   break;
+  
+case STATE_GAMEOVER:
+  // ■ゲームオーバー
+  if(mouse_check_button_pressed(mb_left))
+  {
+    // 最初からやり直す
+    room_goto(rm_main);
+  }
+  break;
 }
 </string>
           </argument>
@@ -157,6 +166,27 @@ var px = 640 + 8;
 draw_text(px, 8, "WAVE: " + string(nWave));
 // 所持金の描画
 draw_text(px, 24, "MONEY: $" + string(money_get()));
+
+// ゲームオーバーの描画
+if(state == STATE_GAMEOVER)
+{
+  // 中央揃え
+  draw_set_halign(fa_center);
+  draw_set_valign(fa_middle);
+  
+  var text = "GAME OVER";
+  var sc = 3; // 拡大サイズ
+  // 影をつける
+  var px = 320;
+  var py = 240;
+  draw_set_color(c_black);
+  draw_text_transformed(px+2, py+2, text, sc, sc, 0);
+  draw_set_color(c_white);
+  draw_text_transformed(px, py, text, sc, sc, 0);
+  
+  draw_set_halign(fa_left);
+  draw_set_valign(fa_top);
+}
 
 </string>
           </argument>

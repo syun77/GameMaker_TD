@@ -1,4 +1,12 @@
 /// gameMgr_stepMain(); ゲームのメイン処理
+// ゲームオーバー判定
+if(lives <= 0)
+{
+  // ライフがなくなったのでゲームオーバー
+  state = STATE_GAMEOVER;
+  return 0;
+}
+
 // インターバルタイマー更新
 spawnIntervalTimer++;
 if(spawnNumber > 0 and spawnIntervalTimer >= spawnInterval)
@@ -26,3 +34,4 @@ if(spawnNumber <= 0 and instance_number(obj_enemy) == 0)
   // ちょっと待つ
   timer = 2 * 60;
 }
+
