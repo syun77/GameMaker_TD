@@ -44,4 +44,3 @@ if(money_get() < cost_infantry())
   // お金が足りないので未選択状態に戻る
   gameMgr_changeSelMode(SELMODE_NONE);
 }
-

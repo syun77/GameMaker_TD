@@ -4,4 +4,3 @@ var base = 5;
 
 // base + Wave数
 return base + nWave;
-

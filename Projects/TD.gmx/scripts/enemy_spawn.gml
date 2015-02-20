@@ -13,4 +13,3 @@ with(instance_create(0, 0, obj_enemy))
   // 移動速度を設定
   path_speed = enemy_getSpeed(nWave);
 }
-

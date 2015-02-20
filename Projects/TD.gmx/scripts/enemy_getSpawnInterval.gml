@@ -3,4 +3,3 @@ var nWave = argument0;
 
 // 60フレームで出現する
 return 60;
-
