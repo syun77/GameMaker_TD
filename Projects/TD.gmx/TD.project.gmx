@@ -34,6 +34,9 @@
     <script>scripts\enemy_getSpawnInterval.gml</script>
     <script>scripts\enemy_spawn.gml</script>
     <script>scripts\enemy_getMoney.gml</script>
+    <script>scripts\infantry_getParam.gml</script>
+    <script>scripts\cost_upgrade.gml</script>
+    <script>scripts\infantry_setParam.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_enemy</object>
@@ -48,13 +51,16 @@
   <rooms name="rooms">
     <room>rooms\rm_main</room>
   </rooms>
-  <constants number="6">
+  <constants number="9">
     <constant name="GRID_SIZE">32</constant>
     <constant name="SELMODE_NONE">0</constant>
     <constant name="SELMODE_BUY">1</constant>
     <constant name="STATE_WAIT">0</constant>
     <constant name="STATE_MAIN">1</constant>
     <constant name="STATE_GAMEOVER">2</constant>
+    <constant name="UPGRADE_RANGE">0</constant>
+    <constant name="UPGRADE_DAMAGE">1</constant>
+    <constant name="UPGRADE_FIRERATE">2</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
