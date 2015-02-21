@@ -26,12 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>/// 初期化
-// 射程範囲
-range = 40;
+// ■レベルを初期化
+// 攻撃範囲
+lvRange = 1;
 // 攻撃威力
-damage = 1;
+lvDamage = 1;
 // 連射速度
-firerate = 2 * 60
+lvFirerate = 1;
+
+// レベルに応じたパラメータを設定する
+infantry_setParam();
 
 // 攻撃対象
 target = noone;
