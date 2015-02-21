@@ -6,4 +6,3 @@ obj_btnBuy.bEnabled = (cost <= money);
 
 // 購入コスト表示を設定する
 obj_btnBuy.label = "BUY($" + string(cost) + ")";
-

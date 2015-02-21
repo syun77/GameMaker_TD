@@ -9,6 +9,23 @@ ycursor += s / 2;
 // カーソル位置のオブジェクトを取得する
 cursorObj = collision_point(xcursor, ycursor, all, false, false);
 
+// アップグレードモードのチェック
+if(cursorObj != noone)
+{
+  if(cursorObj.object_index == obj_infantry)
+  {
+    if(mouse_check_button_pressed(mb_left))
+    {
+      // 砲台をクリックした
+      // アップグレードモードにする
+      gameMgr_changeSelMode(SELMODE_UPGRADE);
+      // 対象の砲台を保存
+      target = cursorObj;
+      return 0;
+    }
+  }
+}
+
 // 配置できるかどうかを判定する
 if(cursorObj != noone)
 {

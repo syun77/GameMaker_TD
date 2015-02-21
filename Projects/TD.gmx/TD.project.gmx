@@ -51,10 +51,11 @@
   <rooms name="rooms">
     <room>rooms\rm_main</room>
   </rooms>
-  <constants number="9">
+  <constants number="10">
     <constant name="GRID_SIZE">32</constant>
     <constant name="SELMODE_NONE">0</constant>
     <constant name="SELMODE_BUY">1</constant>
+    <constant name="SELMODE_UPGRADE">2</constant>
     <constant name="STATE_WAIT">0</constant>
     <constant name="STATE_MAIN">1</constant>
     <constant name="STATE_GAMEOVER">2</constant>

@@ -51,6 +51,8 @@ cursorObj = noone;
 
 // 操作モード
 selmode = SELMODE_NONE;
+// アップグレード対象の砲台
+target = noone;
 
 </string>
           </argument>
@@ -170,6 +172,20 @@ var px = 640 + 8;
 draw_text(px, 8, "WAVE: " + string(nWave));
 // 所持金の描画
 draw_text(px, 24, "MONEY: $" + string(money_get()));
+
+// アップグレードモードの描画
+if(selmode == SELMODE_UPGRADE)
+{
+  with(target)
+  {
+    // 砲台のレベル表示
+    var py = 136;
+    draw_text(px, py, "[Infantry Info]");
+    draw_text(px, py+16, "RANGE: "+ string(lvRange));
+    draw_text(px, py+32, "DAMAGE: " + string(lvDamage));
+    draw_text(px, py+48, "FIRERATE: " + string(lvFirerate));
+  }
+}
 
 // ゲームオーバーの描画
 if(state == STATE_GAMEOVER)
