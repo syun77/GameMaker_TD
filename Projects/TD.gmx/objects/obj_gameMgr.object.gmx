@@ -258,6 +258,39 @@ if(state == STATE_GAMEOVER)
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>/// 射程範囲の描画
+if(selmode == SELMODE_UPGRADE)
+{
+  draw_set_colour(c_white);
+  draw_set_alpha(0.3);
+  var px = target.x;
+  var py = target.y;
+  var radius = infantry_getParam(UPGRADE_RANGE, target.lvRange);
+  draw_circle(px, py, radius*2, false);
+  draw_set_alpha(1);
+  draw_circle(px, py, radius*2, true);
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>/// カーソルの描画
 // 矩形カーソルの描画
 if(xcursor &gt; 640)
@@ -291,6 +324,11 @@ if(cursorObj != noone)
 draw_set_alpha(0.3);
 draw_sprite(spr_infantry, 0, xcursor, ycursor);
 draw_set_alpha(1);
+
+// 射程範囲を描画
+draw_set_colour(c_white);
+var radius = infantry_getParam(UPGRADE_RANGE, 1);
+draw_circle(xcursor, ycursor, radius*2, true);
 
 </string>
           </argument>
