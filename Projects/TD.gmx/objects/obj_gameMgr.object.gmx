@@ -50,7 +50,7 @@ ycursor = 0;
 cursorObj = noone;
 
 // 操作モード
-selmode = SELMODE_NONE;
+gameMgr_changeSelMode(SELMODE_NONE);
 // アップグレード対象の砲台
 target = noone;
 
