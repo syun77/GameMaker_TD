@@ -24,6 +24,7 @@
     <script>scripts\gameMgr_updateCursor.gml</script>
     <script>scripts\gameMgr_changeSelMode.gml</script>
     <script>scripts\gameMgr_updateBtnBuy.gml</script>
+    <script>scripts\gameMgr_updateBtnUpgrade.gml</script>
     <script>scripts\money_get.gml</script>
     <script>scripts\money_use.gml</script>
     <script>scripts\money_add.gml</script>
