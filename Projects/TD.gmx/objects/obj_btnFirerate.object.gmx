@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>/// クリック時の処理
-show_message("連射速度のアップグレード実行");
+// 連射速度のアップグレード実行
+gameMgr_upgrade(UPGRADE_FIRERATE);
 
 </string>
           </argument>

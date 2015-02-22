@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>/// クリック時の処理
-show_message("射程範囲のアップグレード");
+// 攻撃範囲のアップグレード実行
+gameMgr_upgrade(UPGRADE_RANGE);
 
 </string>
           </argument>

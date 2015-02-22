@@ -8,7 +8,7 @@ if(selmode != SELMODE_UPGRADE)
 // ■攻撃範囲ボタン
 {
   // コスト
-  var cost = cost_upgrade(UPGRADE_RANGE, target.lvRange);
+  var cost = target.cRange;
   // 購入可能かどうか
   obj_btnRange.bEnabled = (cost <= money);
   // ラベル更新
@@ -18,7 +18,7 @@ if(selmode != SELMODE_UPGRADE)
 // ■攻撃威力ボタン
 {
   // コスト
-  var cost = cost_upgrade(UPGRADE_DAMAGE, target.lvDamage);
+  var cost = target.cDamage;
   // 購入可能かどうか
   obj_btnDamage.bEnabled = (cost <= money);
   // ラベル更新
@@ -28,10 +28,9 @@ if(selmode != SELMODE_UPGRADE)
 // ■連射速度ボタン
 {
   // コスト
-  var cost = cost_upgrade(UPGRADE_FIRERATE, target.lvFirerate);
+  var cost = target.cFirerate;
   // 購入可能かどうか
   obj_btnFirerate.bEnabled = (cost <= money);
   // ラベル更新
   obj_btnFirerate.label = "FIRERATE($" + string(cost) + ")";
 }
-

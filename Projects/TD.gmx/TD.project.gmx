@@ -25,6 +25,7 @@
     <script>scripts\gameMgr_changeSelMode.gml</script>
     <script>scripts\gameMgr_updateBtnBuy.gml</script>
     <script>scripts\gameMgr_updateBtnUpgrade.gml</script>
+    <script>scripts\gameMgr_upgrade.gml</script>
     <script>scripts\money_get.gml</script>
     <script>scripts\money_use.gml</script>
     <script>scripts\money_add.gml</script>
@@ -48,8 +49,8 @@
     <object>objects\obj_btn</object>
     <object>objects\obj_btnBuy</object>
     <object>objects\obj_wave</object>
-    <object>objects\obj_btnRange</object>
     <object>objects\obj_btnDamage</object>
+    <object>objects\obj_btnRange</object>
     <object>objects\obj_btnFirerate</object>
   </objects>
   <rooms name="rooms">
