@@ -47,6 +47,9 @@
     <object>objects\obj_btn</object>
     <object>objects\obj_btnBuy</object>
     <object>objects\obj_wave</object>
+    <object>objects\obj_btnRange</object>
+    <object>objects\obj_btnDamage</object>
+    <object>objects\obj_btnFirerate</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
