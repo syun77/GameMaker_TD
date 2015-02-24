@@ -26,6 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>/// 初期化
+// ボタン位置の調整
+obj_btnBuyNormal.x = obj_btnBuy.x;
+obj_btnBuyHoming.x = obj_btnBuy.x;
+obj_btnBuyLaser.x = obj_btnBuy.x;
+
 // Wave数
 nWave = 1;
 // 所持金

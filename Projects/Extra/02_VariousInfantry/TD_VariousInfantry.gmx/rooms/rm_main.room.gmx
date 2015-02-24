@@ -93,6 +93,9 @@
     <instance objName="obj_btnRange" x="656" y="224" name="inst_EC831380" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_btnDamage" x="656" y="272" name="inst_8482CF3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_btnFirerate" x="656" y="320" name="inst_A4A8771B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_btnBuyNormal" x="704" y="144" name="inst_2C89041D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_btnBuyHoming" x="704" y="192" name="inst_A98BBD58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_btnBuyLaser" x="704" y="240" name="inst_AED20082" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
