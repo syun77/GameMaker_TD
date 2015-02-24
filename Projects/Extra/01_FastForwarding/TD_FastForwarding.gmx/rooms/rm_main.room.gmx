@@ -93,6 +93,7 @@
     <instance objName="obj_btnRange" x="656" y="224" name="inst_EC831380" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_btnDamage" x="656" y="272" name="inst_8482CF3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_btnFirerate" x="656" y="320" name="inst_A4A8771B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_btnFF" x="656" y="384" name="inst_EBE73F0E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

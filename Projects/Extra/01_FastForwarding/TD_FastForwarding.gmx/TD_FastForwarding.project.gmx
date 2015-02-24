@@ -53,6 +53,7 @@
     <object>objects\obj_btnDamage</object>
     <object>objects\obj_btnRange</object>
     <object>objects\obj_btnFirerate</object>
+    <object>objects\obj_btnFF</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
