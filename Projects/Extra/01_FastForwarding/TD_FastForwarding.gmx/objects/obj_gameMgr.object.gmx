@@ -26,6 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>/// 初期化
+// フレームカウンタ
+tFrame = 0;
+
 // Wave数
 nWave = 1;
 // 所持金
@@ -97,6 +100,26 @@ target = noone;
           <argument>
             <kind>1</kind>
             <string>/// 更新
+// フレームスキップ
+tFrame++;
+draw_enable_drawevent(true);
+if(room_speed == 120)
+{
+  if(tFrame%2 == 0)
+  {
+    // 2回に1回間引く
+    draw_enable_drawevent(false);
+  }
+}
+if(room_speed == 180)
+{
+  if(tFrame%3 != 0)
+  {
+    // 3回に2回間引く
+    draw_enable_drawevent(false);
+  }
+}
+
 // カーソル更新
 gameMgr_updateCursor();
 
