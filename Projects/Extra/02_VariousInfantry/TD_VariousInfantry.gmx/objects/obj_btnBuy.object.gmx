@@ -56,7 +56,7 @@ label = "BUY";
             <kind>1</kind>
             <string>/// クリック時の処理
 // 購入モードに切り替える
-gameMgr_changeSelMode(SELMODE_BUY);
+gameMgr_changeSelMode(SELMODE_SELINFANTRY);
 
 </string>
           </argument>
