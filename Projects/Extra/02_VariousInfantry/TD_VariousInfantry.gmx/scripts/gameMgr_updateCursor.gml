@@ -54,7 +54,7 @@ if(mouse_check_button_pressed(mb_left) == false)
 // お金を減らす
 money_use(cost_infantry());
 // 配置できる
-instance_create(xcursor, ycursor, obj_infantry);
+instance_create(xcursor, ycursor, buyInfantry);
 // 所持金チェック
 if(money_get() < cost_infantry())
 {

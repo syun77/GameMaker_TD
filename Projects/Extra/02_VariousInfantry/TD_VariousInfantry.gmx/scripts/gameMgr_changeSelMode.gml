@@ -22,6 +22,10 @@ with(obj_gameMgr)
     // ▼各砲台の購入モードへ切り替える
     // 購入ボタンを非表示
     obj_btnBuy.visible = false;
+    // アップグレードボタンを非表示
+    obj_btnRange.visible = false;
+    obj_btnDamage.visible = false;
+    obj_btnFirerate.visible = false;
     // 各砲台の購入ボタンを表示にする
     obj_btnBuyNormal.visible = true;
     obj_btnBuyHoming.visible = true;
