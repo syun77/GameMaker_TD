@@ -333,7 +333,7 @@ if(cursorObj != noone)
   exit;
 }
 draw_set_alpha(0.3);
-draw_sprite(spr_infantry, 0, xcursor, ycursor);
+draw_sprite(object_get_sprite(buyInfantry), 0, xcursor, ycursor);
 draw_set_alpha(1);
 
 // 射程範囲を描画

@@ -53,7 +53,10 @@ label = "Homing";
           <argument>
             <kind>1</kind>
             <string>/// クリック時の処理
-show_message("ホーミング砲台の購入");
+// 生成するオブジェクトを設定
+obj_gameMgr.buyInfantry = obj_infantryHoming;
+// 購入モードにする
+gameMgr_changeSelMode(SELMODE_BUY);
 
 </string>
           </argument>

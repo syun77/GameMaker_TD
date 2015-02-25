@@ -250,7 +250,8 @@ default: col = c_fuchsia; break; // 赤紫色
 // 色を設定
 draw_set_colour(col);
 // 描画
-draw_sprite_ext(spr_infantry2, 0, x, y, 1, 1, image_angle, col, 1);
+//draw_sprite_ext(spr_infantry2, 0, x, y, 1, 1, image_angle, col, 1);
+draw_sprite_ext(sprite_index, 0, x, y, 1, 1, image_angle, col, 1);
 
 </string>
           </argument>

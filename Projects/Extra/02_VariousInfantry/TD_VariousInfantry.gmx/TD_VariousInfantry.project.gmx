@@ -13,6 +13,8 @@
     <sprite>sprites\spr_button</sprite>
     <sprite>sprites\spr_heart</sprite>
     <sprite>sprites\spr_infantry2</sprite>
+    <sprite>sprites\spr_infantryHoming</sprite>
+    <sprite>sprites\spr_infantryLaser</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_back</background>
@@ -56,6 +58,8 @@
     <object>objects\obj_btnBuyNormal</object>
     <object>objects\obj_btnBuyHoming</object>
     <object>objects\obj_btnBuyLaser</object>
+    <object>objects\obj_infantryHoming</object>
+    <object>objects\obj_infantryLaser</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>

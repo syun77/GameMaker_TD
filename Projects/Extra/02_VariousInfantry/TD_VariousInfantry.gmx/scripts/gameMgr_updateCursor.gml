@@ -12,7 +12,9 @@ cursorObj = collision_point(xcursor, ycursor, all, false, false);
 // アップグレードモードのチェック
 if(cursorObj != noone)
 {
-  if(cursorObj.object_index == obj_infantry)
+  // 親オブジェクトのインデックスを取得する
+  var parent = object_get_parent(cursorObj.object_index);
+  if(cursorObj.object_index == obj_infantry or parent == obj_infantry)
   {
     if(mouse_check_button_pressed(mb_left))
     {
