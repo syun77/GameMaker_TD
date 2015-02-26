@@ -42,6 +42,9 @@ target = noone;
 // インターバルタイマー
 tInterval = 0;
 
+// 生成するショットオブジェクト
+shot = obj_shot;
+
 </string>
           </argument>
         </arguments>
@@ -192,7 +195,7 @@ if(tInterval &gt; 0)
 
 // ローカル変数に格納する
 var e = target;
-with(instance_create(x, y, obj_shot))
+with(instance_create(x, y, shot))
 {
   // 敵の方向に向かって撃つ
   direction = point_direction(x, y, e.x, e.y);
