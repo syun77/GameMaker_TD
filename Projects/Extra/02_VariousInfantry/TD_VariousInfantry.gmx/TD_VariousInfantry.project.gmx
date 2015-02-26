@@ -62,6 +62,7 @@
     <object>objects\obj_infantryLaser</object>
     <object>objects\obj_shotHoming</object>
     <object>objects\obj_shotLaser</object>
+    <object>objects\obj_bomb</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
