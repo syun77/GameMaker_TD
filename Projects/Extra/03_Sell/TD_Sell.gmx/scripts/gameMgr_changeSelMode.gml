@@ -12,6 +12,8 @@ with(obj_gameMgr)
     obj_btnRange.visible = false;
     obj_btnDamage.visible = false;
     obj_btnFirerate.visible = false;
+    // 売却ボタンを非表示
+    obj_btnSell.visible = false;
     break;
     
   case SELMODE_BUY:
@@ -22,6 +24,8 @@ with(obj_gameMgr)
     obj_btnRange.visible = false;
     obj_btnDamage.visible = false;
     obj_btnFirerate.visible = false;
+    // 売却ボタンを非表示
+    obj_btnSell.visible = false;
     break;
     
   case SELMODE_UPGRADE:
@@ -32,8 +36,11 @@ with(obj_gameMgr)
     obj_btnRange.visible = true;
     obj_btnDamage.visible = true;
     obj_btnFirerate.visible = true;
+    // 売却ボタンを非表示
+    obj_btnSell.visible = true;
   }
   
   // 選択モードを設定する
   selmode = mode;
 }
+
