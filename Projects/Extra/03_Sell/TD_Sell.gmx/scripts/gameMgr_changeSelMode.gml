@@ -43,4 +43,3 @@ with(obj_gameMgr)
   // 選択モードを設定する
   selmode = mode;
 }
-
