@@ -40,6 +40,7 @@
     <script>scripts\infantry_getParam.gml</script>
     <script>scripts\cost_upgrade.gml</script>
     <script>scripts\infantry_setParam.gml</script>
+    <script>scripts\cost_infantrySell.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_enemy</object>
