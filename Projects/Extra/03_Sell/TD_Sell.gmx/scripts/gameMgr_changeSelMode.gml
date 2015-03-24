@@ -38,6 +38,7 @@ with(obj_gameMgr)
     obj_btnFirerate.visible = true;
     // 売却ボタンを非表示
     obj_btnSell.visible = true;
+    break;
   }
   
   // 選択モードを設定する

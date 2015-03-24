@@ -51,6 +51,7 @@ if(mouse_check_button_pressed(mb_left) == false)
   // クリックしていないので配置できない
   return 0;
 }
+
 // お金を減らす
 money_use(cost_infantry());
 // 配置できる

@@ -217,7 +217,7 @@ if(hp &lt;= 0)
 {
   // HPがなくなったので消滅
   instance_destroy();
-  
+    
   // お金を増やす
   money_add(money);
 }
@@ -276,7 +276,7 @@ if(hp &lt;= 0)
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>0,0</point>
+    <point>16,16</point>
     <point>16,16</point>
   </PhysicsShapePoints>
 </object>

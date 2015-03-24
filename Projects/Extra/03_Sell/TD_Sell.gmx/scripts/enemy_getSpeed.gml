@@ -2,5 +2,5 @@
 var nWave = argument0;
 
 // base + Wave数
-var base = 2;
-return (base + nWave * 0.1) * 0.5;
+var base = 1;
+return base + (nWave * 0.05);

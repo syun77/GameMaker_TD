@@ -58,6 +58,7 @@ nWave = 1;
 switch(state)
 {
 case 0:
+  // 初期化
   state = 1;
   timer = 60;
   x = -80;
@@ -123,9 +124,9 @@ draw_set_valign(fa_middle);
 var text = "WAVE " + string(nWave);
 var sc = 3; // 拡大サイズ
 // 影をつける
-draw_set_color(c_black);
+draw_set_colour(c_black);
 draw_text_transformed(x+2, y+2, text, sc, sc, 0);
-draw_set_color(c_white);
+draw_set_colour(c_white);
 draw_text_transformed(x, y, text, sc, sc, 0);
 
 draw_set_halign(fa_left);
