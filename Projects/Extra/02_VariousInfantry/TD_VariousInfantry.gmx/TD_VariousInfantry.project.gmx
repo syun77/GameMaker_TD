@@ -25,23 +25,23 @@
   <scripts name="scripts">
     <script>scripts\gameMgr_stepMain.gml</script>
     <script>scripts\gameMgr_updateCursor.gml</script>
-    <script>scripts\gameMgr_changeSelMode.gml</script>
-    <script>scripts\gameMgr_updateBtnBuy.gml</script>
-    <script>scripts\gameMgr_updateBtnUpgrade.gml</script>
-    <script>scripts\gameMgr_upgrade.gml</script>
     <script>scripts\money_get.gml</script>
     <script>scripts\money_use.gml</script>
     <script>scripts\money_add.gml</script>
     <script>scripts\cost_infantry.gml</script>
+    <script>scripts\gameMgr_changeSelMode.gml</script>
+    <script>scripts\gameMgr_updateBtnBuy.gml</script>
     <script>scripts\enemy_getHp.gml</script>
     <script>scripts\enemy_getSpeed.gml</script>
+    <script>scripts\enemy_getMoney.gml</script>
     <script>scripts\enemy_getSpawnNumber.gml</script>
     <script>scripts\enemy_getSpawnInterval.gml</script>
     <script>scripts\enemy_spawn.gml</script>
-    <script>scripts\enemy_getMoney.gml</script>
     <script>scripts\infantry_getParam.gml</script>
     <script>scripts\cost_upgrade.gml</script>
     <script>scripts\infantry_setParam.gml</script>
+    <script>scripts\gameMgr_updateBtnUpgrade.gml</script>
+    <script>scripts\gameMgr_upgrade.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_enemy</object>
@@ -52,8 +52,8 @@
     <object>objects\obj_btn</object>
     <object>objects\obj_btnBuy</object>
     <object>objects\obj_wave</object>
-    <object>objects\obj_btnDamage</object>
     <object>objects\obj_btnRange</object>
+    <object>objects\obj_btnDamage</object>
     <object>objects\obj_btnFirerate</object>
     <object>objects\obj_btnBuyNormal</object>
     <object>objects\obj_btnBuyHoming</object>
@@ -61,8 +61,8 @@
     <object>objects\obj_infantryHoming</object>
     <object>objects\obj_infantryLaser</object>
     <object>objects\obj_shotHoming</object>
-    <object>objects\obj_shotLaser</object>
     <object>objects\obj_bomb</object>
+    <object>objects\obj_shotLaser</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>

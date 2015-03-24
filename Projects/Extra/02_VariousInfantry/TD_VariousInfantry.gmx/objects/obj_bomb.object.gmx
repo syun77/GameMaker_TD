@@ -32,7 +32,6 @@ damage = 0.01;
 tDestroy = 60;
 // 半径
 radius = 32;
-
 </string>
           </argument>
         </arguments>
@@ -68,7 +67,6 @@ if(tDestroy &lt; 1)
 var px = x;
 var py = y;
 var r = radius;
-var dmg = damage;
 with(obj_enemy)
 {
   // 敵との衝突判定
@@ -76,7 +74,7 @@ with(obj_enemy)
   {
     // 当たった
     effect_create_above(ef_ring, x, y, 0, c_yellow);
-    hp -= dmg;
+    hp -= other.damage;
     if(hp &lt; 0)
     {
       // 敵を倒した
@@ -109,6 +107,12 @@ with(obj_enemy)
           <argument>
             <kind>1</kind>
             <string>/// 描画
+if(irandom_range(0, 3) == 0)
+{
+  // 点滅する
+  exit;
+}
+
 // 加算合成で描画
 draw_set_blend_mode(bm_add);
 draw_set_alpha(tDestroy / 60);

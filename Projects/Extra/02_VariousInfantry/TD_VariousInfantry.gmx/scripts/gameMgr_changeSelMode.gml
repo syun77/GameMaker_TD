@@ -58,6 +58,7 @@ with(obj_gameMgr)
     obj_btnBuyNormal.visible = false;
     obj_btnBuyHoming.visible = false;
     obj_btnBuyLaser.visible = false;
+    break;
   }
   
   // 選択モードを設定する

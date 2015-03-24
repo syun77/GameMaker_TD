@@ -30,5 +30,5 @@ with(obj_gameMgr)
     infantry_setParam();
     // アップグレードエフェクトを生成する
     effect_create_above(ef_ellipse, x, y, 1, c_yellow);
-  }  
+  }
 }

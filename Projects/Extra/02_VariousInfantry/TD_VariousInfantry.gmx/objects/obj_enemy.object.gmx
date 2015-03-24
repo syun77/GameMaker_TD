@@ -183,20 +183,6 @@ image_angle = direction;
     <event eventtype="4" ename="obj_shot">
       <action>
         <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
-        <codestring></codestring>
-        <whoName>other</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -212,12 +198,18 @@ image_angle = direction;
           <argument>
             <kind>1</kind>
             <string>/// HPを減らす
+if(other.object_index == obj_shotLaser)
+{
+  // レーザーの衝突判定は独自に行うのでここでは何もしない
+  exit;
+}
+
 hp -= other.damage;
 if(hp &lt;= 0)
 {
   // HPがなくなったので消滅
   instance_destroy();
-  
+    
   // お金を増やす
   money_add(money);
 }
@@ -276,7 +268,7 @@ if(hp &lt;= 0)
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>0,0</point>
+    <point>16,16</point>
     <point>16,16</point>
   </PhysicsShapePoints>
 </object>
