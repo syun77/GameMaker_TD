@@ -26,9 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>/// 初期化
-// フレームカウンタ
-tFrame = 0;
-
 // Wave数
 nWave = 1;
 // 所持金
@@ -100,26 +97,6 @@ target = noone;
           <argument>
             <kind>1</kind>
             <string>/// 更新
-// フレームスキップ
-tFrame++;
-draw_enable_drawevent(true);
-if(room_speed == 120)
-{
-  if(tFrame%2 == 0)
-  {
-    // 2回に1回間引く
-    draw_enable_drawevent(false);
-  }
-}
-if(room_speed == 180)
-{
-  if(tFrame%3 != 0)
-  {
-    // 3回に2回間引く
-    draw_enable_drawevent(false);
-  }
-}
-
 // カーソル更新
 gameMgr_updateCursor();
 
@@ -169,6 +146,7 @@ case STATE_GAMEOVER:
   }
   break;
 }
+
 </string>
           </argument>
         </arguments>
@@ -225,9 +203,9 @@ if(state == STATE_GAMEOVER)
   // 影をつける
   var px = 320;
   var py = 240;
-  draw_set_color(c_black);
+  draw_set_colour(c_black);
   draw_text_transformed(px+2, py+2, text, sc, sc, 0);
-  draw_set_color(c_white);
+  draw_set_colour(c_white);
   draw_text_transformed(px, py, text, sc, sc, 0);
   
   draw_set_halign(fa_left);
@@ -254,7 +232,7 @@ if(state == STATE_GAMEOVER)
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>648</string>
+            <string>640</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -340,9 +318,9 @@ if(selmode != SELMODE_BUY)
 // 砲台を薄く描画する
 if(cursorObj != noone)
 {
+  // 配置できない場所なので配置不可の描画
   if(cursorObj.object_index == obj_off)
   {
-    // 配置できない場所なので配置不可の描画
     draw_sprite(spr_off, 0, x1, y1);
   }
   exit;
@@ -355,7 +333,6 @@ draw_set_alpha(1);
 draw_set_colour(c_white);
 var radius = infantry_getParam(UPGRADE_RANGE, 1);
 draw_circle(xcursor, ycursor, radius*2, true);
-
 </string>
           </argument>
         </arguments>

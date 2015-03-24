@@ -109,7 +109,6 @@ if(tInterval &gt; 0)
 {
   tInterval--;
 }
-
 </string>
           </argument>
         </arguments>
@@ -130,8 +129,8 @@ if(tInterval &gt; 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// 一番近い敵を向く
-// 一番近い敵を探す
+            <string>/// 一番近い敵に向く
+// ①一番近い敵を探す
 target = instance_nearest(x, y, obj_enemy);
 if(target == noone)
 {
@@ -139,7 +138,7 @@ if(target == noone)
   exit;
 }
 
-// 敵との距離を求める
+// ②敵との距離を求める
 var distance = distance_to_object(target);
 if(distance &gt; range)
 {
@@ -147,6 +146,7 @@ if(distance &gt; range)
   exit;
 }
 
+// ③敵の方向を向く
 // 敵がいる方向を求める
 var dir = point_direction(x, y, target.x, target.y);
 // 角度差を求める
@@ -154,6 +154,7 @@ var diff = angle_difference(dir, image_angle);
 // 敵がいる方向を向くようにする
 image_angle += diff * 0.2
 
+// ④ショットを撃てるかどうかのチェック
 // 再び角度差を求める
 var diff2 = angle_difference(dir, image_angle);
 if(abs(diff2) &gt; 16)
@@ -189,7 +190,6 @@ if(tInterval &gt; 0)
   // まだ撃てない
   exit;
 }
-
 // ローカル変数に格納する
 var e = target;
 with(instance_create(x, y, obj_shot))
@@ -203,7 +203,7 @@ with(instance_create(x, y, obj_shot))
   // 攻撃力を設定
   damage = other.damage;
 }
-    
+
 // インターバル開始
 tInterval = firerate;
 

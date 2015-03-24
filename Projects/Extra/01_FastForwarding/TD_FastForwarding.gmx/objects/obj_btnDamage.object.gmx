@@ -28,7 +28,6 @@
             <string>/// クリック時の処理
 // 攻撃威力のアップグレード実行
 gameMgr_upgrade(UPGRADE_DAMAGE);
-
 </string>
           </argument>
         </arguments>
@@ -46,5 +45,8 @@ gameMgr_upgrade(UPGRADE_DAMAGE);
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>0,0</point>
+    <point>16,16</point>
+  </PhysicsShapePoints>
 </object>

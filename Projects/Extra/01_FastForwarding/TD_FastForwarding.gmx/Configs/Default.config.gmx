@@ -64,7 +64,6 @@
     <option_audioGroupCount>1</option_audioGroupCount>
     <option_author></option_author>
     <option_backimage>nil</option_backimage>
-    <option_borderless>false</option_borderless>
     <option_changed>false</option_changed>
     <option_changeresolution>false</option_changeresolution>
     <option_closeesc>true</option_closeesc>
@@ -78,8 +77,8 @@
     <option_frequency>0</option_frequency>
     <option_frontimage>nil</option_frontimage>
     <option_fullscreen>false</option_fullscreen>
-    <option_gameguid>{1BEB34EA-FF19-42AD-AE3B-A1A4C99ED35D}</option_gameguid>
-    <option_gameid>377305755</option_gameid>
+    <option_gameguid>{81FB13A4-E47B-4089-AFA1-5CB4D40E43E6}</option_gameguid>
+    <option_gameid>538280185</option_gameid>
     <option_haptic_effects>false</option_haptic_effects>
     <option_hasloadimage>false</option_hasloadimage>
     <option_helpkey>true</option_helpkey>
@@ -90,7 +89,6 @@
     <option_html5_advertising_type>Supersonic Ads</option_html5_advertising_type>
     <option_html5_allow_fullscreen>true</option_html5_allow_fullscreen>
     <option_html5_alwaysreload>false</option_html5_alwaysreload>
-    <option_html5_browser_title>Created with GameMaker:Studio</option_html5_browser_title>
     <option_html5_centergame>false</option_html5_centergame>
     <option_html5_flurry_enable>false</option_html5_flurry_enable>
     <option_html5_flurry_id></option_html5_flurry_id>
@@ -103,7 +101,6 @@
     <option_html5_interpolate>true</option_html5_interpolate>
     <option_html5_jsprepend></option_html5_jsprepend>
     <option_html5_loadingbar>-1</option_html5_loadingbar>
-    <option_html5_localrunalert>true</option_html5_localrunalert>
     <option_html5_outputdebugtoconsole>false</option_html5_outputdebugtoconsole>
     <option_html5_outputname>index.html</option_html5_outputname>
     <option_html5_scale>-1</option_html5_scale>

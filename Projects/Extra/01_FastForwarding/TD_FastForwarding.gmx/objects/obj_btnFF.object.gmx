@@ -8,6 +8,33 @@
   <parentName>obj_btn</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// 初期化
+event_inherited();
+
+// フレームカウンタ
+tFrame = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -31,6 +58,46 @@ event_inherited();
 // ラベル更新
 var spd = room_speed / 60;
 label = "x" + string(spd);
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///  フレームスキップ
+tFrame++;
+draw_enable_drawevent(true);
+if(room_speed == 120)
+{
+  if(tFrame%2 == 0)
+  {
+    // 2回に1回間引く
+    draw_enable_drawevent(false);
+  }
+}
+if(room_speed == 180)
+{
+  if(tFrame%3 != 0)
+  {
+    // 3回に2回間引く
+    draw_enable_drawevent(false);
+  }
+}
 
 </string>
           </argument>
@@ -88,5 +155,8 @@ else //if(room_speed == 180)
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>0,0</point>
+    <point>16,16</point>
+  </PhysicsShapePoints>
 </object>
