@@ -5,8 +5,8 @@ var lv = argument1;
 switch(type)
 {
 case UPGRADE_RANGE:
-  // 射程範囲 (= 8 + 4 * lv)
-  return 8 + (4 * lv);
+  // 射程範囲 (= 8 + 8 * lv)
+  return 8 + (8 * lv);
   
 case UPGRADE_DAMAGE:
   // 攻撃威力 (= lv)
@@ -18,4 +18,3 @@ case UPGRADE_FIRERATE:
   
 default: return 0;
 }
-

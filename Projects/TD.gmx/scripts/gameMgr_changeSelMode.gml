@@ -32,6 +32,7 @@ with(obj_gameMgr)
     obj_btnRange.visible = true;
     obj_btnDamage.visible = true;
     obj_btnFirerate.visible = true;
+    break;
   }
   
   // 選択モードを設定する

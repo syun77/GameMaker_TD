@@ -23,23 +23,23 @@
   <scripts name="scripts">
     <script>scripts\gameMgr_stepMain.gml</script>
     <script>scripts\gameMgr_updateCursor.gml</script>
-    <script>scripts\gameMgr_changeSelMode.gml</script>
-    <script>scripts\gameMgr_updateBtnBuy.gml</script>
-    <script>scripts\gameMgr_updateBtnUpgrade.gml</script>
-    <script>scripts\gameMgr_upgrade.gml</script>
     <script>scripts\money_get.gml</script>
     <script>scripts\money_use.gml</script>
     <script>scripts\money_add.gml</script>
     <script>scripts\cost_infantry.gml</script>
+    <script>scripts\gameMgr_changeSelMode.gml</script>
+    <script>scripts\gameMgr_updateBtnBuy.gml</script>
     <script>scripts\enemy_getHp.gml</script>
     <script>scripts\enemy_getSpeed.gml</script>
+    <script>scripts\enemy_getMoney.gml</script>
     <script>scripts\enemy_getSpawnNumber.gml</script>
     <script>scripts\enemy_getSpawnInterval.gml</script>
     <script>scripts\enemy_spawn.gml</script>
-    <script>scripts\enemy_getMoney.gml</script>
     <script>scripts\infantry_getParam.gml</script>
     <script>scripts\cost_upgrade.gml</script>
     <script>scripts\infantry_setParam.gml</script>
+    <script>scripts\gameMgr_updateBtnUpgrade.gml</script>
+    <script>scripts\gameMgr_upgrade.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_enemy</object>
@@ -50,8 +50,8 @@
     <object>objects\obj_btn</object>
     <object>objects\obj_btnBuy</object>
     <object>objects\obj_wave</object>
-    <object>objects\obj_btnDamage</object>
     <object>objects\obj_btnRange</object>
+    <object>objects\obj_btnDamage</object>
     <object>objects\obj_btnFirerate</object>
   </objects>
   <rooms name="rooms">
@@ -61,13 +61,13 @@
     <constant name="GRID_SIZE">32</constant>
     <constant name="SELMODE_NONE">0</constant>
     <constant name="SELMODE_BUY">1</constant>
-    <constant name="SELMODE_UPGRADE">2</constant>
     <constant name="STATE_WAIT">0</constant>
     <constant name="STATE_MAIN">1</constant>
     <constant name="STATE_GAMEOVER">2</constant>
     <constant name="UPGRADE_RANGE">0</constant>
     <constant name="UPGRADE_DAMAGE">1</constant>
     <constant name="UPGRADE_FIRERATE">2</constant>
+    <constant name="SELMODE_UPGRADE">2</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

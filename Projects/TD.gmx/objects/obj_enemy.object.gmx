@@ -105,7 +105,7 @@ money = 1;
           </argument>
           <argument>
             <kind>13</kind>
-            <string>32768</string>
+            <string>65280</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -221,7 +221,6 @@ if(hp &lt;= 0)
   // お金を増やす
   money_add(money);
 }
-
 </string>
           </argument>
         </arguments>
@@ -275,8 +274,5 @@ if(hp &lt;= 0)
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints>
-    <point>0,0</point>
-    <point>16,16</point>
-  </PhysicsShapePoints>
+  <PhysicsShapePoints/>
 </object>

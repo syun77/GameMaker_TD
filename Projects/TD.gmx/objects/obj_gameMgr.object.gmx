@@ -97,6 +97,7 @@ target = noone;
           <argument>
             <kind>1</kind>
             <string>/// 更新
+/// 更新
 // カーソル更新
 gameMgr_updateCursor();
 
@@ -146,6 +147,7 @@ case STATE_GAMEOVER:
   }
   break;
 }
+
 </string>
           </argument>
         </arguments>
@@ -202,9 +204,9 @@ if(state == STATE_GAMEOVER)
   // 影をつける
   var px = 320;
   var py = 240;
-  draw_set_color(c_black);
+  draw_set_colour(c_black);
   draw_text_transformed(px+2, py+2, text, sc, sc, 0);
-  draw_set_color(c_white);
+  draw_set_colour(c_white);
   draw_text_transformed(px, py, text, sc, sc, 0);
   
   draw_set_halign(fa_left);

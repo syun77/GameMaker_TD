@@ -22,4 +22,3 @@ case UPGRADE_FIRERATE:
 }
 
 return floor(cost);
-

@@ -14,4 +14,3 @@ cRange = cost_upgrade(UPGRADE_RANGE, lvRange);
 cDamage = cost_upgrade(UPGRADE_DAMAGE, lvDamage);
 // 発射間隔
 cFirerate = cost_upgrade(UPGRADE_FIRERATE, lvFirerate);
-

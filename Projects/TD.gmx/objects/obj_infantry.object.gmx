@@ -130,7 +130,7 @@ if(tInterval &gt; 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// 一番近い敵を向く
+            <string>/// 一番近い敵に向く
 // 一番近い敵を探す
 target = instance_nearest(x, y, obj_enemy);
 if(target == noone)
@@ -147,6 +147,7 @@ if(distance &gt; range)
   exit;
 }
 
+// 敵の方向を向く
 // 敵がいる方向を求める
 var dir = point_direction(x, y, target.x, target.y);
 // 角度差を求める
@@ -154,6 +155,7 @@ var diff = angle_difference(dir, image_angle);
 // 敵がいる方向を向くようにする
 image_angle += diff * 0.2
 
+// ショットを撃てるかどうかのチェック
 // 再び角度差を求める
 var diff2 = angle_difference(dir, image_angle);
 if(abs(diff2) &gt; 16)
@@ -247,8 +249,6 @@ case 4: col = c_orange; break; // オレンジ色
 default: col = c_fuchsia; break; // 赤紫色
 }
 
-// 色を設定
-draw_set_colour(col);
 // 描画
 draw_sprite_ext(spr_infantry2, 0, x, y, 1, 1, image_angle, col, 1);
 
@@ -269,8 +269,5 @@ draw_sprite_ext(spr_infantry2, 0, x, y, 1, 1, image_angle, col, 1);
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints>
-    <point>16,16</point>
-    <point>16,16</point>
-  </PhysicsShapePoints>
+  <PhysicsShapePoints/>
 </object>
